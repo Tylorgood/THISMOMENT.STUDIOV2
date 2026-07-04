@@ -1,0 +1,106 @@
+{
+  "theme_and_archetype": {
+    "theme": "Dark",
+    "archetype": "Archetype 5: Luxury",
+    "reasoning": "A high-end creative event and entertainment studio requires an immersive, cinematic, and moody atmosphere. The deep black base allows the warm gold accents and stage lighting to pop, evoking the feeling of an exclusive private show."
+  },
+  "typography": {
+    "heading_font": "Cormorant Garamond",
+    "body_font": "Outfit",
+    "hierarchy_rules": {
+      "h1": "text-5xl sm:text-6xl md:text-7xl tracking-tighter font-medium text-white leading-none",
+      "h2": "text-3xl sm:text-4xl md:text-5xl tracking-tight font-medium text-white leading-tight",
+      "h3": "text-xl sm:text-2xl tracking-tight font-medium text-white",
+      "body": "text-base md:text-lg leading-relaxed text-zinc-400 font-light",
+      "overline": "text-xs tracking-[0.2em] uppercase text-[#D4AF37] font-semibold"
+    }
+  },
+  "color_palette": {
+    "background": {
+      "base": "#0A0A0A",
+      "surface": "#121110",
+      "elevated": "#1A1A1A"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#A3A3A3",
+      "muted": "#71717A"
+    },
+    "accent": {
+      "gold": "#D4AF37",
+      "gold_glow": "rgba(212, 175, 55, 0.15)",
+      "spotlight_white": "rgba(255, 255, 255, 0.05)"
+    },
+    "borders": {
+      "subtle": "rgba(255, 255, 255, 0.08)",
+      "gold_subtle": "rgba(212, 175, 55, 0.3)"
+    }
+  },
+  "spacing_and_layout": {
+    "container_padding": "px-6 md:px-12 lg:px-24 py-24 lg:py-32",
+    "gap_strategy": "Generous gaps (gap-8 to gap-24) to allow content to breathe and feel expensive. Negative space is highly valued.",
+    "border_radius": "rounded-none or minimal rounded-sm (2px) to maintain a sharp, architectural, high-end feel. No pill-shaped buttons.",
+    "gallery_grid": "Asymmetric bento grid (grid-cols-1 md:grid-cols-12 gap-4) focusing on optical alignment and negative space. Use varying col-spans and row-spans."
+  },
+  "3d_and_motion": {
+    "libraries": [
+      "@react-three/fiber",
+      "@react-three/drei",
+      "framer-motion",
+      "lenis",
+      "three"
+    ],
+    "hero_3d": "React Three Fiber scene featuring volumetric spotlights (using SpotLight from drei with attenuation), floating dust particles (Sparkles component, scale 10, low opacity), and a dark matte stage plane. Camera should have a slow, breathing sway (using Float or useFrame mapping pointer coordinates).",
+    "scroll_experience": "Use Framer Motion's useScroll hooked into React Three Fiber or HTML overlays to trigger camera transitions or element fade-ins as the user scrolls through the 'Experience' scenes.",
+    "micro_interactions": "Hover states on services/gallery should feature a slow 700ms scale-up (scale-105) of the image, with a subtle border glow. Use pure CSS transitions for performance: `transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]`."
+  },
+  "component_strategy": {
+    "marketing_sections": "Use raw HTML + Tailwind CSS for Hero, Experience, and Gallery to allow absolute positioning, overlaps, and aggressive asymmetry.",
+    "forms": "Use highly customized Shadcn UI components for the Booking section. Inputs must have transparent backgrounds with a bottom border (border-b border-white/20) that turns gold (#D4AF37) on focus, rather than standard boxed inputs. Label text small and uppercase.",
+    "buttons": "Primary CTA: Solid Gold (#D4AF37) background with black text, zero border radius, hover to slightly brighter gold with black text. Secondary CTA: Transparent background, 1px solid border-white/20, hover to border-[#D4AF37] and text-[#D4AF37].",
+    "file_format": "Use .js and .jsx extensions exclusively (no TypeScript/.tsx files)."
+  },
+  "page_structure": {
+    "header": "Fixed top, z-50, transparent transitioning to backdrop-blur-xl bg-black/60 on scroll. Clean text logo left, CTA button right.",
+    "hero": "h-[100vh] relative overflow-hidden. Absolute 3D canvas behind content. Text layered on top, left-aligned, max-w-3xl. H1: 'This Moment Studio'. Tagline: 'Soundtracks for the Moments That Define You.' Buttons: 'Book an Event' (Primary), 'See Upcoming Shows' (Secondary).",
+    "experience": "Scroll-based narrative section. Text on the left, alternating to right, while 3D background subtly shifts lighting or camera angle. Scenes: Live performance stage, Private party / lounge vibe, Event hosting, Creative production.",
+    "services": "Grid of 4 minimalist cards. Each card has an overline, H3, short description, and an arrow icon that translates right on hover. Subtle hover background change (bg-white/5).",
+    "gallery": "Masonry/Bento grid of curated stock imagery showcasing the nightlife/event energy. Cinematic hover zoom.",
+    "booking": "Split layout. Left: Large typography 'Let's create the moment.' Right: Lead capture form (Name, email, phone, event type, date, message) built with customized Shadcn Form.",
+    "footer": "Massive top padding (py-32). Large logo typography (text-[8vw] leading-none). Grid for contact info: Phone (586-339-4701), Email (hello@thismoment.studio), Social (@thismoment.studio). Subtle top border (border-t border-white/10)."
+  },
+  "image_urls": {
+    "hero_fallback": {
+      "url": "https://images.unsplash.com/photo-1558620013-a08999547a36?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTN8MHwxfHNlYXJjaHwyfHxsaXZlJTIwc3RhZ2UlMjBzcG90bGlnaHQlMjBkYXJrfGVufDB8fHx8MTc4MzE3NzU0M3ww&ixlib=rb-4.1.0&q=85",
+      "description": "Dark stage with bright dramatic spotlights",
+      "usage": "Fallback background for the 3D hero canvas or visual texture mapping for 3D elements."
+    },
+    "gallery_1": {
+      "url": "https://images.unsplash.com/photo-1541126274323-dbac58d14741?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2ODh8MHwxfHNlYXJjaHwyfHxkaiUyMHBlcmZvcm1pbmclMjBkYXJrfGVufDB8fHx8MTc4MzE3NzU0M3ww&ixlib=rb-4.1.0&q=85",
+      "description": "DJ performing in the dark with ambient lighting",
+      "usage": "Gallery grid primary visual (col-span-2 or similar large focus area)"
+    },
+    "gallery_2": {
+      "url": "https://images.unsplash.com/photo-1657208431551-cbf415b8ef26?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTN8MHwxfHNlYXJjaHwzfHxsaXZlJTIwc3RhZ2UlMjBzcG90bGlnaHQlMjBkYXJrfGVufDB8fHx8MTc4MzE3NzU0M3ww&ixlib=rb-4.1.0&q=85",
+      "description": "Concert crowd silhouette under spotlights",
+      "usage": "Gallery grid supporting visual"
+    },
+    "gallery_3": {
+      "url": "https://images.unsplash.com/photo-1764255510960-deee566a91f0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBldmVudCUyMHBhcnR5JTIwZGFya3xlbnwwfHx8fDE3ODMxNzc1NDN8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Luxury private party dining under disco ball",
+      "usage": "Experience section or Gallery grid visual representing private parties"
+    },
+    "gallery_4": {
+      "url": "https://images.unsplash.com/photo-1767050190883-29d644fa5b99?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHwzfHxsdXh1cnklMjBldmVudCUyMHBhcnR5JTIwZGFya3xlbnwwfHx8fDE3ODMxNzc1NDN8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Elegant table setting with candles in the dark",
+      "usage": "Gallery grid supporting visual representing intimate hosting"
+    }
+  },
+  "testing_attributes": {
+    "booking_form_submit": "data-testid='booking-submit-button'",
+    "booking_form_input": "data-testid='booking-input-[field]'",
+    "navigation_link": "data-testid='nav-link-[name]'",
+    "hero_cta": "data-testid='hero-cta-[action]'",
+    "service_card": "data-testid='service-card-[name]'"
+  }
+}
