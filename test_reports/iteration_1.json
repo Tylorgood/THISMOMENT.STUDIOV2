@@ -1,0 +1,28 @@
+{
+  "summary": "First-finish smoke test of This Moment Studio MVP. Backend API (health, POST/GET /api/bookings, validation) and frontend (homepage, hero, navigation, booking form happy path, contact links, mobile toggle) all working end-to-end. Booking is persisted to MongoDB and returned via list endpoint.",
+  "tested_scope": ["backend", "frontend", "integration"],
+  "passed": [
+    "GET /api/ returns 200 {message, status:'live'}",
+    "POST /api/bookings happy path returns 200 with uuid id, status:'new', ISO created_at",
+    "POST /api/bookings missing name returns 422 (Field required)",
+    "POST /api/bookings invalid email returns 422 (value_error)",
+    "GET /api/bookings returns list sorted by created_at desc; newly created booking is first",
+    "Frontend loads with title 'This Moment Studio — Live shows. Private events. Unforgettable moments.'",
+    "Hero heading 'This Moment Studio' visible",
+    "Nav links Experience, Services, Gallery, Shows, Book present; nav-cta-book present",
+    "All booking form data-testid inputs present (name, email, phone, event_type, event_date, message, submit)",
+    "Booking form happy path: fill all fields -> POST succeeds -> booking-success card with 'Thank you' shown",
+    "Successful submission persisted to Mongo (verified via GET /api/bookings — record 6ed69b96-... present)",
+    "Contact phone href = tel:+15863394701, email href = mailto:hello@thismoment.studio",
+    "Mobile viewport 375x812: nav-mobile-toggle visible & opens mobile menu with all sections + Book an Event CTA"
+  ],
+  "failed": [],
+  "notes": [
+    "Empty-form submit: sonner toast text 'Please complete all required fields' was not detected in DOM query, but form did NOT submit (browser-native HTML5 'required' validation blocks submission before JS toast fires). Behavior is correct — invalid submissions are prevented.",
+    "3D canvas rendered fine in headless Chromium; no blocking WebGL errors observed."
+  ],
+  "action_items": [],
+  "success_rate": {"backend": "100%", "frontend": "100%"},
+  "retest_needed": false,
+  "full_testing_deferred": true
+}
