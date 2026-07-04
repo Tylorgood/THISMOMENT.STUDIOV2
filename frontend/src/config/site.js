@@ -1,5 +1,5 @@
 // Central configuration for This Moment Studio.
-// Edit brand identity, contact info, social links & copy here.
+// Edit brand identity, contact info, social links and copy here.
 // No design changes required to update these values.
 
 export const SITE_CONFIG = {
@@ -8,7 +8,7 @@ export const SITE_CONFIG = {
     shortName: "TMS",
     tagline: "Live shows. Private events. Unforgettable moments.",
     heroSubline:
-      "Soundtracks for the moments that define you — a private show, a curated night, a memory in the making.",
+      "Soundtracks for the moments that define you - a private show, a curated night, a memory in the making.",
     description:
       "This Moment Studio designs cinematic live shows, private events and creative productions for tastemakers, brands and unforgettable nights.",
   },
@@ -17,7 +17,7 @@ export const SITE_CONFIG = {
     phoneHref: "tel:+15863394701",
     email: "hello@thismoment.studio",
     emailHref: "mailto:hello@thismoment.studio",
-    location: "By appointment — Worldwide",
+    location: "By appointment - Worldwide",
   },
   social: {
     instagram: {
@@ -36,6 +36,7 @@ export const SITE_CONFIG = {
   eventTypes: [
     "Live Show",
     "Private Event",
+    "Creator Website Campaign",
     "Brand Activation",
     "Wedding / Celebration",
     "Corporate Night",
@@ -43,9 +44,9 @@ export const SITE_CONFIG = {
     "Other",
   ],
   upcomingShows: [
-    { title: "Golden Hour — Vol. III", date: "Feb 14", city: "Detroit, MI", status: "By Invite" },
-    { title: "Velvet Room Sessions", date: "Mar 08", city: "Miami, FL", status: "Limited" },
-    { title: "Nocturne — After Dark", date: "Apr 20", city: "New York, NY", status: "Soon" },
+    { title: "Golden Hour - Vol. III", date: "Feb 14, 2027", city: "TBA", status: "Planning" },
+    { title: "Velvet Room Sessions", date: "TBA", city: "TBA", status: "Soon" },
+    { title: "Nocturne - After Dark", date: "TBA", city: "TBA", status: "Soon" },
   ],
 };
 

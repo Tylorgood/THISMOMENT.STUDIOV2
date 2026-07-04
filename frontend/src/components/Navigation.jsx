@@ -15,6 +15,7 @@ export default function Navigation() {
   const links = [
     { label: "Experience", href: "#experience" },
     { label: "Services", href: "#services" },
+    { label: "Creator Sites", href: "#creator-websites" },
     { label: "Gallery", href: "#gallery" },
     { label: "Shows", href: "#shows" },
     { label: "Book", href: "#booking" },
