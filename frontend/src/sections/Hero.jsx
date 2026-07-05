@@ -54,9 +54,12 @@ export default function Hero() {
             className="font-display text-white text-[13vw] md:text-[9vw] lg:text-[7.5vw] leading-[0.95] tracking-tight"
             style={{ opacity: 0, animation: "fadeUp 1000ms 400ms cubic-bezier(.16,1,.3,1) forwards" }}
           >
-            This <em className="not-italic text-[#D4AF37]">Moment</em>
+            This{" "}
+            <em className="not-italic text-[#D4AF37]">
+              Moment<span className="text-white">.</span>
+            </em>
             <br />
-            Studio<span className="text-[#D4AF37]">.</span>
+            Studio
           </h1>
 
           <p
@@ -98,12 +101,12 @@ export default function Hero() {
         <div className="mt-16 flex items-end justify-between border-t border-white/8 pt-6 text-[11px] tracking-widest-plus uppercase text-white/40">
           <div className="flex items-center gap-3">
             <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
-            Now Booking · Winter Season
+            Now Booking - Winter Season
           </div>
           <div className="hidden md:flex items-center gap-8">
-            <span>Live · Curated · Cinematic</span>
+            <span>Live - Curated - Cinematic</span>
             <a href="#experience" className="hover:text-[#D4AF37] transition">
-              Scroll ↓
+              Scroll down
             </a>
           </div>
         </div>
